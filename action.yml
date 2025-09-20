@@ -1,0 +1,5 @@
+name: 'Expose Actions Environment'
+description: 'Exposes the ACTIONS_ environment variables to subsequent steps in the job'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
