@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        # This won't print anything because the ACTIONS_RUNTIME_TOKEN environment variable isn't exposed
-        echo "$ACTIONS_RUNTIME_TOKEN"
+          # This won't print anything because the ACTIONS_RUNTIME_TOKEN environment variable isn't exposed
+          echo "$ACTIONS_RUNTIME_TOKEN"
 ```
 
 To fix it, run the white-axe/expose-actions-environment action beforehand:
@@ -23,6 +23,6 @@ jobs:
     steps:
       - uses: white-axe/expose-actions-environment@v1
       - run: |
-        # This environment variable will exist this time
-        echo "$ACTIONS_RUNTIME_TOKEN"
+          # This environment variable will exist this time
+          echo "$ACTIONS_RUNTIME_TOKEN"
 ```
