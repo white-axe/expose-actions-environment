@@ -1,3 +1,3 @@
 #!/bin/sh
 
-env | grep '^ACTIONS_' >> "$GITHUB_ENV"
+env | grep '^ACTIONS_' | tee -a "$GITHUB_ENV"
